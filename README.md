@@ -1,1 +1,3 @@
 # bw_customCompressFunctions
+
+Test
