@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CompressFunctions
+Bundle-SymbolicName: compressFunctions;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Export-Package: compressfunctions
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.tibco.xml.cxf.common.annotations
+Service-Component: OSGI-INF/cxf.xml

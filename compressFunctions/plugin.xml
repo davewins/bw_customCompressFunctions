@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="CompressFunctions"
+         name="CompressFunctions"
+         point="com.tibco.xml.cxf.common.customXPathFunction">
+      <customXPathFunctionGroup
+            class="compressfunctions.CompressFunctions"
+            id="compressfunctions">
+      </customXPathFunctionGroup>
+   </extension>
+
+</plugin>
