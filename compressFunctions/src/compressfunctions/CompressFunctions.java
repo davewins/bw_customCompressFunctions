@@ -18,7 +18,7 @@ public class CompressFunctions {
 
 	@XPathFunction(helpText = "Description", parameters = { @XPathFunctionParameter(name = "inputString", optional = false, optionalValue = "") })
 	public static String gzip(String inputString) {
-		//System.out.println("Gzip Input length : " + inputString.length());
+		System.out.println("Gzip Input length : " + inputString.length());
 		ByteArrayOutputStream bos = new ByteArrayOutputStream(inputString.length());
 		GZIPOutputStream gzip;
 		byte[] compressed = null;
