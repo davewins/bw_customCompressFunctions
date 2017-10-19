@@ -30,4 +30,4 @@ Both take a String as input, with an optional debug paramter which can be set to
 Using the Compress Functions in the TIBCO BusinessWorks Mapper:
 ![logo]
 
-[logo]: https://github.com/davewins/bw_customCompressFunctions/Mapper.png "BW Mapper"
+[logo]: https://github.com/davewins/bw_customCompressFunctions/blob/master/Mapper.png "BW Mapper"
