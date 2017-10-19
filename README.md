@@ -20,7 +20,14 @@ Make sure you select Install into Host Repository. You will have to accept the u
 
 ### Description 
 
+The functions will appear in the Functions tab of the Mapper. There are two functions:
+
+gzip
+gunzip
+
+Both take a String as input, with an optional debug paramter which can be set to true or false.
+
 Using the Compress Functions in the TIBCO BusinessWorks Mapper:
 ![logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "BW Mapper"
+[logo]: https://github.com/davewins/bw_customCompressFunctions/Mapper.png "BW Mapper"
