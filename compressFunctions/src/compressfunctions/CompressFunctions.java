@@ -16,9 +16,9 @@ import com.tibco.xml.cxf.common.annotations.XPathFunctionParameter;
 @XPathFunctionGroup(category = "Compress Functions", prefix = "comp", namespace = "compress", helpText = "Functions to Gzip/Gunzip strings")
 public class CompressFunctions {
 
-	@XPathFunction(helpText = "Description", parameters = { @XPathFunctionParameter(name = "inputString", optional = false, optionalValue = "") })
-	public static String gzip(String inputString) {
-		System.out.println("Gzip Input length : " + inputString.length());
+	@XPathFunction(helpText = "Uses Java gzip utilities to compress data, returning a Base64 encoded string", parameters = { @XPathFunctionParameter(name = "inputString", optional = false, optionalValue = ""),@XPathFunctionParameter(name = "debug", optional = true, optionalValue = "false") })
+	public static String gzip(String inputString, boolean debug) {
+		if (debug) System.out.println("Gzip Input length : " + inputString.length());
 		ByteArrayOutputStream bos = new ByteArrayOutputStream(inputString.length());
 		GZIPOutputStream gzip;
 		byte[] compressed = null;
@@ -33,13 +33,13 @@ public class CompressFunctions {
 		}
 		//String encoded = new String(compressed);
 		String encoded = Base64.getEncoder().encodeToString(compressed);
-        //System.out.println("Gzip Output bytes length : " + encoded.length());
+		if (debug) System.out.println("Gzip Output bytes length : " + encoded.length());
 		return encoded;
 	}
 
-	@XPathFunction(helpText = "Description", parameters = { @XPathFunctionParameter(name = "inputString", optional = false, optionalValue = "") })
-	public static String gunzip(String inputString) {
-		//System.out.println("Gunzip Input length : " + inputString.length());
+	@XPathFunction(helpText = "Uses Java gunzip utilities to uncompress a Base64 encoded string", parameters = { @XPathFunctionParameter(name = "inputString", optional = false, optionalValue = ""),@XPathFunctionParameter(name = "debug", optional = true, optionalValue = "false")})
+	public static String gunzip(String inputString, boolean debug) {
+		if (debug) System.out.println("Gunzip Input length : " + inputString.length());
 		byte[] decoded = Base64.getDecoder().decode(inputString.getBytes());
 		ByteArrayInputStream bis = new ByteArrayInputStream(decoded);
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -61,7 +61,7 @@ public class CompressFunctions {
 			e.printStackTrace();
 		}
 
-        //System.out.println("gunzip output String length : " + sb.toString().length());
+		if (debug) System.out.println("gunzip output String length : " + bos.toString().length());
 		return bos.toString();
 	}
 }
