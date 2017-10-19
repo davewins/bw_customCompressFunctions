@@ -1,9 +1,11 @@
-#BusinessWorks Custom Compress Functions
+# BusinessWorks Custom Compress Functions
 
-<Overview>
+## Overview
 
-<Prerequisites/Minimum Platform version>
+## Prerequisites/Minimum Platform version
 
-<Installation Steps>
+## Installation Steps
 
-<Description - Include any details on how the plug-in works like description for each activity, etc>
+### Description 
+
+- Include any details on how the plug-in works like description for each activity, etc
